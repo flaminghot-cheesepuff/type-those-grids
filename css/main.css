@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-family: Merriweather, serif;
   line-height: 1.5;
+  align-self: auto;
 }
 
 *, *::before, *::after {
@@ -14,8 +15,8 @@ body {
   border: 0;
 
   grid-template-columns: 1fr;
-      display: grid;
-      grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "header"
     "main";
 }
