@@ -83,6 +83,10 @@ figure {
   padding: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 .main-grid {
   list-style-type: none;
   padding: 0;
