@@ -7,34 +7,24 @@ html {
   box-sizing: inherit;
 }
 
-div {
-  position: relative;
-  width: 100%;
-}
-
-div img {
-  display: cover;
-  width: 100%;
-  height: auto;
+body {
+  margin: 0;
   padding: 0;
+  max-width: 100%;
+
+  grid-template-columns: 1fr;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
 }
 
-div figcaption {
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  font-style: italic;
+header {
+  grid-area: header;
 }
 
-div p {
-  color: white;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  width: 100%;
+header img {
+  width: 100vw;
 }
 
 ul {
@@ -49,13 +39,25 @@ dt {
   font-style: italic;
 }
 
+main {
+  grid-area: main;
+}
+
+figure {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 .main-grid {
   list-style-type: none;
-  padding: 1rem;
+  padding: 0;
+  width: 100vw;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-  gap: .75rem;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: .75rem;
 }
 
 .main-grid li {
@@ -66,10 +68,10 @@ dt {
 
   body {
 
-    grid-template-columns: 5fr;
+    grid-template-columns: 30% 30% 30%;
     display: grid;
     grid-template-areas:
-    "header"
+    "header header header"
     "main main main";
   }
 }
